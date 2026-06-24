@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Inicio - Django 5 Practica{% endblock %}
+{% block content %}
+<div class="row align-items-center mb-5">
+    <div class="col-lg-7">
+        <h1 class="display-5 fw-bold text-primary mb-3">
+            <i class="fas fa-shield-alt me-3"></i>Django 5 Practica
+        </h1>
+        <p class="lead text-muted">
+            Sistema completo: formularios robustos, validacion multinivel,
+            Django Admin personalizado, Middleware de auditoria y autenticacion segura.
+        </p>
+        <div class="d-flex gap-3 mt-4">
+            {% if user.is_authenticated %}
+            <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg"><i class="fas fa-tachometer-alt me-2"></i>Mi Dashboard</a>
+            <a href="{% url 'crear_producto' %}" class="btn btn-outline-primary btn-lg"><i class="fas fa-plus me-2"></i>Nuevo Producto</a>
+            {% else %}
+            <a href="{% url 'registro' %}" class="btn btn-primary btn-lg"><i class="fas fa-user-plus me-2"></i>Registrarse</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg"><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesion</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card bg-primary text-white p-4 text-center">
+            <h3 class="mb-0">{{ total_productos }}</h3>
+            <p class="mb-0">Productos activos en el sistema</p>
+        </div>
+    </div>
+</div>
+<div class="row g-3 mb-5">
+    <div class="col-md-3"><div class="card text-center p-3"><i class="fas fa-wpforms fa-2x text-primary mb-2"></i><h6>Formularios Robustos</h6><small class="text-muted">ModelForm + validacion multinivel</small></div></div>
+    <div class="col-md-3"><div class="card text-center p-3"><i class="fas fa-check-circle fa-2x text-success mb-2"></i><h6>Validacion y Sanitizacion</h6><small class="text-muted">clean(), validators, XSS/SQLi</small></div></div>
+    <div class="col-md-3"><div class="card text-center p-3"><i class="fas fa-cog fa-2x text-warning mb-2"></i><h6>Django Admin</h6><small class="text-muted">Filtros, busqueda, acciones masivas</small></div></div>
+    <div class="col-md-3"><div class="card text-center p-3"><i class="fas fa-network-wired fa-2x text-danger mb-2"></i><h6>Middleware y Sesiones</h6><small class="text-muted">Auditoria, CSRF, permisos</small></div></div>
+</div>
+{% if productos_destacados %}
+<h4 class="mb-3"><i class="fas fa-box me-2"></i>Productos Recientes</h4>
+<div class="row g-3">
+    {% for p in productos_destacados %}
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <span class="badge bg-secondary mb-2">{{ p.get_categoria_display }}</span>
+                <h5 class="card-title">{{ p.nombre }}</h5>
+                <p class="card-text text-muted small">{{ p.descripcion|truncatechars:80 }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="h5 text-primary mb-0">S/. {{ p.precio }}</span>
+                    <span class="badge {% if p.stock == 0 %}bg-danger{% elif p.stock < 5 %}bg-warning text-dark{% else %}bg-success{% endif %}">Stock: {{ p.stock }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

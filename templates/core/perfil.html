@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Mi Perfil{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card">
+            <div class="card-header bg-dark text-white py-3">
+                <h4 class="mb-0"><i class="fas fa-user-circle me-2"></i>Mi Perfil</h4>
+            </div>
+            <div class="card-body p-4">
+                <table class="table">
+                    <tr><th width="35%">Nombre completo</th><td>{{ usuario.get_full_name|default:"No especificado" }}</td></tr>
+                    <tr><th>Usuario</th><td><code>{{ usuario.username }}</code></td></tr>
+                    <tr><th>Email</th><td>{{ usuario.email }}</td></tr>
+                    <tr><th>Miembro desde</th><td>{{ usuario.date_joined|date:"d/m/Y" }}</td></tr>
+                    <tr><th>Ultimo login</th><td>{{ usuario.last_login|date:"d/m/Y H:i"|default:"Primera vez" }}</td></tr>
+                    <tr><th>Es Staff</th><td>{% if usuario.is_staff %}<span class="badge bg-warning text-dark">Si</span>{% else %}<span class="badge bg-secondary">No</span>{% endif %}</td></tr>
+                    <tr><th>Superusuario</th><td>{% if usuario.is_superuser %}<span class="badge bg-danger">Si</span>{% else %}<span class="badge bg-secondary">No</span>{% endif %}</td></tr>
+                </table>
+                <hr>
+                <h6 class="text-muted"><i class="fas fa-key me-2"></i>Informacion de Sesion</h6>
+                <table class="table table-sm">
+                    <tr><th>Session Key</th><td><code class="small">{{ session_info.key }}</code></td></tr>
+                    <tr><th>Ultima Actividad</th><td><small>{{ session_info.ultima_actividad }}</small></td></tr>
+                    <tr><th>Expiracion</th><td><small>{{ session_info.expira|date:"d/m/Y H:i" }}</small></td></tr>
+                </table>
+                <div class="mt-3">
+                    <a href="{% url 'dashboard' %}" class="btn btn-outline-primary me-2"><i class="fas fa-tachometer-alt me-1"></i>Dashboard</a>
+                    <a href="{% url 'logout_seguro' %}" class="btn btn-outline-danger"><i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

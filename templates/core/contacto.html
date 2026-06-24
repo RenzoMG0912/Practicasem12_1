@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}Contacto{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-info text-white py-3">
+                <h4 class="mb-0"><i class="fas fa-envelope me-2"></i>Formulario de Contacto</h4>
+                <small>Formulario clasico con validacion multinivel y sanitizacion de entradas</small>
+            </div>
+            <div class="card-body p-4">
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}<p class="mb-0"><i class="fas fa-exclamation-triangle me-1"></i>{{ error }}</p>{% endfor %}
+                </div>
+                {% endif %}
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">{{ form.nombre.label }} *</label>
+                            {{ form.nombre }}
+                            {% for error in form.nombre.errors %}<div class="text-danger small mt-1"><i class="fas fa-times-circle me-1"></i>{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">{{ form.email.label }} *</label>
+                            {{ form.email }}
+                            {% for error in form.email.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">{{ form.confirmar_email.label }} *</label>
+                            {{ form.confirmar_email }}
+                            {% for error in form.confirmar_email.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">{{ form.asunto.label }} *</label>
+                            {{ form.asunto }}
+                            {% for error in form.asunto.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">{{ form.mensaje.label }} *</label>
+                            {{ form.mensaje }}
+                            {% for error in form.mensaje.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                            <div class="form-text">Minimo 20 caracteres. No se permite HTML ni SQL.</div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-info text-white px-4">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3 border-warning">
+            <div class="card-body py-2">
+                <small>
+                    <i class="fas fa-shield-alt me-1 text-warning"></i>
+                    <strong>Seguridad activa:</strong> CSRF token | Sanitizacion XSS (escape()) |
+                    Validacion anti-SQLi | Validacion cross-field email | Limpieza de espacios
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

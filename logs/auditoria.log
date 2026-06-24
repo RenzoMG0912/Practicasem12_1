@@ -1,0 +1,138 @@
+[2026-06-24 13:21:14,027] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /
+[2026-06-24 13:21:14,028] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: home | Ruta: /
+[2026-06-24 13:21:14,069] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: / | Status: 200 | Tiempo: 42.95ms
+[2026-06-24 13:21:18,859] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /login/
+[2026-06-24 13:21:18,860] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:21:18,866] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 10.68ms
+[2026-06-24 13:21:21,355] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /login/
+[2026-06-24 13:21:21,357] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:21:21,834] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 481.37ms
+[2026-06-24 13:21:53,617] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /login/
+[2026-06-24 13:21:53,618] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:21:54,231] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /login/ | Status: 302 | Tiempo: 618.48ms
+[2026-06-24 13:21:54,257] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:21:54,259] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:21:54,312] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 61.60ms
+[2026-06-24 13:21:59,334] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/6/editar/
+[2026-06-24 13:21:59,335] INFO core.middleware - VIEW | Usuario: admin | Vista: editar_producto | Ruta: /productos/6/editar/
+[2026-06-24 13:21:59,362] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/6/editar/ | Status: 200 | Tiempo: 32.55ms
+[2026-06-24 13:22:01,199] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/
+[2026-06-24 13:22:01,200] INFO core.middleware - VIEW | Usuario: admin | Vista: lista_productos | Ruta: /productos/
+[2026-06-24 13:22:01,208] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/ | Status: 200 | Tiempo: 13.94ms
+[2026-06-24 13:22:03,516] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/4/editar/
+[2026-06-24 13:22:03,516] INFO core.middleware - VIEW | Usuario: admin | Vista: editar_producto | Ruta: /productos/4/editar/
+[2026-06-24 13:22:03,526] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/4/editar/ | Status: 200 | Tiempo: 17.07ms
+[2026-06-24 13:22:06,772] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: POST | Ruta: /productos/4/editar/
+[2026-06-24 13:22:06,773] INFO core.middleware - VIEW | Usuario: admin | Vista: editar_producto | Ruta: /productos/4/editar/
+[2026-06-24 13:22:06,788] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/4/editar/ | Status: 302 | Tiempo: 19.75ms
+[2026-06-24 13:22:06,812] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/
+[2026-06-24 13:22:06,813] INFO core.middleware - VIEW | Usuario: admin | Vista: lista_productos | Ruta: /productos/
+[2026-06-24 13:22:06,822] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/ | Status: 200 | Tiempo: 16.61ms
+[2026-06-24 13:22:08,575] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/4/editar/
+[2026-06-24 13:22:08,576] INFO core.middleware - VIEW | Usuario: admin | Vista: editar_producto | Ruta: /productos/4/editar/
+[2026-06-24 13:22:08,584] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/4/editar/ | Status: 200 | Tiempo: 13.79ms
+[2026-06-24 13:22:12,597] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: POST | Ruta: /productos/4/editar/
+[2026-06-24 13:22:12,605] INFO core.middleware - VIEW | Usuario: admin | Vista: editar_producto | Ruta: /productos/4/editar/
+[2026-06-24 13:22:12,629] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/4/editar/ | Status: 302 | Tiempo: 40.04ms
+[2026-06-24 13:22:12,678] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/
+[2026-06-24 13:22:12,682] INFO core.middleware - VIEW | Usuario: admin | Vista: lista_productos | Ruta: /productos/
+[2026-06-24 13:22:12,707] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/ | Status: 200 | Tiempo: 41.68ms
+[2026-06-24 13:22:16,134] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /contacto/
+[2026-06-24 13:22:16,135] INFO core.middleware - VIEW | Usuario: admin | Vista: contacto | Ruta: /contacto/
+[2026-06-24 13:22:16,143] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /contacto/ | Status: 200 | Tiempo: 14.79ms
+[2026-06-24 13:22:17,300] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /productos/
+[2026-06-24 13:22:17,301] INFO core.middleware - VIEW | Usuario: admin | Vista: lista_productos | Ruta: /productos/
+[2026-06-24 13:22:17,309] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /productos/ | Status: 200 | Tiempo: 15.09ms
+[2026-06-24 13:22:18,232] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:22:18,233] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:22:18,245] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 17.39ms
+[2026-06-24 13:22:19,546] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /admin/
+[2026-06-24 13:22:19,547] INFO core.middleware - VIEW | Usuario: admin | Vista: index | Ruta: /admin/
+[2026-06-24 13:22:19,610] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /admin/ | Status: 200 | Tiempo: 67.57ms
+[2026-06-24 13:22:26,822] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: POST | Ruta: /admin/logout/
+[2026-06-24 13:22:26,823] INFO core.middleware - VIEW | Usuario: admin | Vista: logout | Ruta: /admin/logout/
+[2026-06-24 13:22:26,833] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /admin/logout/ | Status: 302 | Tiempo: 16.98ms
+[2026-06-24 13:22:26,841] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /login/
+[2026-06-24 13:22:26,842] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:22:26,845] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 3.43ms
+[2026-06-24 13:22:31,151] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /registro/
+[2026-06-24 13:22:31,152] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:22:31,180] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /registro/ | Status: 200 | Tiempo: 31.56ms
+[2026-06-24 13:22:48,718] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /registro/
+[2026-06-24 13:22:48,719] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:22:48,738] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /registro/ | Status: 200 | Tiempo: 22.99ms
+[2026-06-24 13:23:05,115] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /registro/
+[2026-06-24 13:23:05,116] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:23:05,130] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /registro/ | Status: 200 | Tiempo: 19.40ms
+[2026-06-24 13:23:13,165] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /registro/
+[2026-06-24 13:23:13,166] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:23:13,177] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /registro/ | Status: 200 | Tiempo: 15.92ms
+[2026-06-24 13:23:48,877] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /registro/
+[2026-06-24 13:23:48,878] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:23:49,403] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: /registro/ | Status: 302 | Tiempo: 528.28ms
+[2026-06-24 13:23:49,428] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:23:49,429] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:23:49,442] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: /dashboard/ | Status: 200 | Tiempo: 19.54ms
+[2026-06-24 13:23:53,256] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:23:53,257] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:23:53,266] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: /dashboard/ | Status: 200 | Tiempo: 14.11ms
+[2026-06-24 13:23:54,177] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /productos/
+[2026-06-24 13:23:54,177] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: lista_productos | Ruta: /productos/
+[2026-06-24 13:23:54,182] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: /productos/ | Status: 200 | Tiempo: 8.92ms
+[2026-06-24 13:23:54,806] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /contacto/
+[2026-06-24 13:23:54,806] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: contacto | Ruta: /contacto/
+[2026-06-24 13:23:54,809] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: /contacto/ | Status: 200 | Tiempo: 7.41ms
+[2026-06-24 13:23:55,517] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /
+[2026-06-24 13:23:55,518] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: home | Ruta: /
+[2026-06-24 13:23:55,527] INFO core.middleware - RESPONSE | Usuario: juanperez_123 | Ruta: / | Status: 200 | Tiempo: 13.62ms
+[2026-06-24 13:23:57,959] INFO core.middleware - REQUEST | Usuario: juanperez_123 | IP: 127.0.0.1 | Método: GET | Ruta: /logout-seguro/
+[2026-06-24 13:23:57,959] INFO core.middleware - VIEW | Usuario: juanperez_123 | Vista: cerrar_sesion_seguro | Ruta: /logout-seguro/
+[2026-06-24 13:23:57,970] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /logout-seguro/ | Status: 302 | Tiempo: 16.09ms
+[2026-06-24 13:23:57,978] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /login/
+[2026-06-24 13:23:57,979] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:23:57,982] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 3.54ms
+[2026-06-24 13:24:01,200] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /login/
+[2026-06-24 13:24:01,200] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:24:01,678] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /login/ | Status: 302 | Tiempo: 481.74ms
+[2026-06-24 13:24:01,700] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:24:01,701] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:24:01,715] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 20.02ms
+[2026-06-24 13:24:03,477] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /admin/
+[2026-06-24 13:24:03,478] INFO core.middleware - VIEW | Usuario: admin | Vista: index | Ruta: /admin/
+[2026-06-24 13:24:03,498] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /admin/ | Status: 200 | Tiempo: 27.63ms
+[2026-06-24 13:24:05,574] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /admin/auth/group/add/
+[2026-06-24 13:24:05,574] INFO core.middleware - VIEW | Usuario: admin | Vista: add_view | Ruta: /admin/auth/group/add/
+[2026-06-24 13:24:05,791] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /admin/auth/group/add/ | Status: 500 | Tiempo: 222.40ms
+[2026-06-24 13:24:07,548] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /admin/
+[2026-06-24 13:24:07,549] INFO core.middleware - VIEW | Usuario: admin | Vista: index | Ruta: /admin/
+[2026-06-24 13:24:07,568] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /admin/ | Status: 200 | Tiempo: 25.41ms
+[2026-06-24 13:24:55,772] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /logout-seguro/
+[2026-06-24 13:24:55,772] INFO core.middleware - VIEW | Usuario: admin | Vista: cerrar_sesion_seguro | Ruta: /logout-seguro/
+[2026-06-24 13:24:55,783] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /logout-seguro/ | Status: 302 | Tiempo: 15.61ms
+[2026-06-24 13:24:55,792] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /login/
+[2026-06-24 13:24:55,793] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:24:55,797] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 4.84ms
+[2026-06-24 13:24:58,551] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /registro/
+[2026-06-24 13:24:58,552] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: registro | Ruta: /registro/
+[2026-06-24 13:24:58,559] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /registro/ | Status: 200 | Tiempo: 11.51ms
+[2026-06-24 13:26:04,419] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: GET | Ruta: /login/
+[2026-06-24 13:26:04,420] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:26:04,422] INFO core.middleware - RESPONSE | Usuario: Anónimo | Ruta: /login/ | Status: 200 | Tiempo: 5.25ms
+[2026-06-24 13:26:06,042] INFO core.middleware - REQUEST | Usuario: Anónimo | IP: 127.0.0.1 | Método: POST | Ruta: /login/
+[2026-06-24 13:26:06,043] INFO core.middleware - VIEW | Usuario: Anónimo | Vista: view | Ruta: /login/
+[2026-06-24 13:26:06,802] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /login/ | Status: 302 | Tiempo: 765.27ms
+[2026-06-24 13:26:06,832] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:26:06,834] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:26:06,851] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 25.58ms
+[2026-06-24 13:26:08,055] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:26:08,055] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:26:08,069] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 17.49ms
+[2026-06-24 13:26:09,707] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:26:09,708] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:26:09,721] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 17.21ms
+[2026-06-24 13:26:09,956] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:26:09,956] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:26:09,967] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 15.35ms
+[2026-06-24 13:26:10,755] INFO core.middleware - REQUEST | Usuario: admin | IP: 127.0.0.1 | Método: GET | Ruta: /dashboard/
+[2026-06-24 13:26:10,755] INFO core.middleware - VIEW | Usuario: admin | Vista: dashboard | Ruta: /dashboard/
+[2026-06-24 13:26:10,772] INFO core.middleware - RESPONSE | Usuario: admin | Ruta: /dashboard/ | Status: 200 | Tiempo: 22.97ms

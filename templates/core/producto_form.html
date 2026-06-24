@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}{{ titulo }}{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white py-3">
+                <h4 class="mb-0"><i class="fas fa-box me-2"></i>{{ titulo }}</h4>
+            </div>
+            <div class="card-body p-4">
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}<p class="mb-0"><i class="fas fa-exclamation-triangle me-1"></i>{{ error }}</p>{% endfor %}
+                </div>
+                {% endif %}
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">{{ form.nombre.label }} *</label>
+                            {{ form.nombre }}
+                            {% for error in form.nombre.errors %}<div class="text-danger small mt-1"><i class="fas fa-times-circle me-1"></i>{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">{{ form.descripcion.label }}</label>
+                            {{ form.descripcion }}
+                            {% for error in form.descripcion.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">{{ form.precio.label }} *</label>
+                            {{ form.precio }}
+                            {% for error in form.precio.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">{{ form.stock.label }} *</label>
+                            {{ form.stock }}
+                            {% for error in form.stock.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">{{ form.categoria.label }}</label>
+                            {{ form.categoria }}
+                            {% for error in form.categoria.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="form-check">
+                                {{ form.activo }}
+                                <label class="form-check-label" for="{{ form.activo.id_for_label }}">
+                                    <strong>{{ form.activo.label }}</strong>
+                                </label>
+                            </div>
+                        </div>
+                        {% for error in form.activo.errors %}<div class="col-12 text-danger small">{{ error }}</div>{% endfor %}
+                    </div>
+                    <hr class="my-4">
+                    <div class="d-flex gap-3">
+                        <button type="submit" class="btn btn-primary px-4">
+                            <i class="fas fa-save me-2"></i>{{ accion }} Producto
+                        </button>
+                        <a href="{% url 'lista_productos' %}" class="btn btn-outline-secondary px-4">
+                            <i class="fas fa-times me-2"></i>Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3 border-info">
+            <div class="card-body py-2">
+                <small class="text-muted">
+                    <i class="fas fa-info-circle me-1 text-info"></i>
+                    <strong>Nota tecnica:</strong> Este formulario usa <code>ProductoForm (ModelForm)</code> con validacion en 3 niveles:
+                    campo (clean_campo()), formulario (clean()) y modelo (validators). CSRF token incluido automaticamente.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
