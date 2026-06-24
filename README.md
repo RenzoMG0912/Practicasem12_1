@@ -70,37 +70,3 @@ python manage.py runserver
 | /admin/                | Django Admin personalizado         | Staff        |
 | /api/stats/            | Estadisticas JSON                  | Staff        |
 
-## Conceptos Implementados por Fase
-
-### Fase 1 - Formularios y Templates
-- `ContactoForm`: formulario clasico (forms.Form)
-- `ProductoForm`: ModelForm con Meta, widgets, labels, error_messages
-- `RegistroUsuarioForm`: extiende UserCreationForm
-- Templates: uso de {{ form.as_p }}, {{ form.errors }}, {% csrf_token %}
-
-### Fase 2 - Validacion y Sanitizacion
-- `clean_campo()`: validacion a nivel de campo en cada formulario
-- `clean()`: validacion cross-field (ej: email == confirmar_email)
-- `validators.py`: validar_solo_letras, validar_sin_html, validar_no_sql_injection
-- `sanitize_input()`: strip() + colapso de espacios + escape() para XSS
-
-### Fase 3 - Django Admin
-- `ProductoAdmin`: list_display, list_filter, search_fields, readonly_fields, fieldsets
-- Campos calculados con @admin.display (precio_formateado, estado_stock_display)
-- Acciones masivas: activar, desactivar, exportar CSV
-- `LogAccesoAdmin`: readonly, sin add/change permissions
-- `admin.site.site_header`, `index_title` personalizados
-
-### Fase 4 - Middleware y Sesiones
-- `AuditoriaMiddleware`: process_request, process_response, process_view
-- `TiempoRespuestaMiddleware`: patron __init__/__call__ (nuevo estilo)
-- `SESSION_ENGINE`, `SESSION_COOKIE_AGE`, `SESSION_COOKIE_HTTPONLY`
-- `@login_required` en todas las vistas protegidas
-- `request.session.flush()` en logout para invalidar completamente
-- Headers personalizados: X-Tiempo-Respuesta, X-Content-Type-Options
-
-### Fase 5 - Integracion y Auditoria
-- Flujo completo: registro -> login -> dashboard -> productos -> admin -> logout
-- LOGGING configurado: archivo logs/auditoria.log + consola
-- Verificar: python manage.py check
-- Headers de seguridad: X-Frame-Options (DENY por defecto Django), X-Content-Type-Options
